@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles.css" />
+    <title>Frontend Mentor | Interactive card details form</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="card-bg">
+        <div class="card-logo">
+          <img src="./images/card-logo.svg" />
+        </div>
+        <div class="card-front">
+          <img src="./images/bg-card-front.png" />
+        </div>
+        <div class="card-back">
+          <img src="./images/bg-card-back.png" />
+        </div>
+        <div class="card-number">
+          <p class="card-number-update">0000 0000 0000 0000</p>
+        </div>
+        <div class="flex">
+          <div class="card-name">Jane Appleseed</div>
+          <div class="expiry-details">
+            <span class="expiry">00</span>
+            <span>/</span>
+            <span class="expiryyear">00</span>
+          </div>
+        </div>
+        <div class="cvv">000</div>
+      </div>
+      <div class="input-form">
+        <form id="form-input">
+          <label for="cardname">Cardholder Name</label>
+          <input
+            type="text"
+            id="cardname"
+            name="cardname"
+            placeholder="e.g. Jane Appleseed"
+          />
+          <p class="error-one">CardName cant be blank</p>
+          <label for="cardnumber">Card Number</label>
+          <input
+            type="text"
+            id="cardnumber"
+            name="cardnumber"
+            placeholder="e.g. 1234 5678 9123 0000"
+            maxlength="19"
+          />
+          <p class="error-two">CardNumber can't be blank</p>
+          <div class="two-col">
+            <div>
+              <label for="month">Exp. Date(MM/YY)</label>
+              <input type="number" id="month" name="month" placeholder="MM" />
+              <input type="number" id="year" name="year" placeholder="YY" />
+              <p class="error-three"></p>
+            </div>
+            <div class="card-verify">
+              <label for="cvvnumber">CVC</label>
+              <input
+                type="number"
+                id="cvvnumber"
+                name="cvvnumber"
+                placeholder="e.g. 123"
+              />
+              <p class="error-four">Can't be blank</p>
+            </div>
+          </div>
+          <input type="submit" value="Confirm" class="submit-btn" />
+        </form>
+        <div id="added-form">
+          <div class="tick-circle">
+            <img src="./images/icon-complete.svg" />
+          </div>
+          <h2>Thank You!</h2>
+          <p>We've added your card details</p>
+          <button class="continuepre">Continue</button>
+        </div>
+      </div>
+    </div>
+    <script src="./app.js"></script>
+  </body>
+</html>
+
+<!-- pattern="/^-?\d+\.?\d*$/"
+onKeyPress="if(this.value.length==2) return false;" -->
